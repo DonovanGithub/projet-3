@@ -1,0 +1,84 @@
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 100%;
+  @if animation 3s {
+    z-index: 10;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #444;
+  animation-fill-mode: forwards;
+  animation-name: loader-end;
+  animation-duration: 2s;
+  animation-delay: 3s;
+}
+@keyframes loader-end {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    width: 0;
+  }
+}
+.preloader h1 {
+  color: white;
+  font-family: Shrikhand;
+  font-weight: 100;
+  font-size: 3.2rem;
+  animation-name: departure;
+  animation-delay: 2.6s;
+  animation-duration: 2s;
+}
+@keyframes departure {
+  80% {
+    transform: translateX(-150px);
+    animation-delay: 0.5s;
+    opacity: 0.1;
+  }
+  100%
+  {
+    opacity: 0;
+  }
+}
+
+.preloader .loader {
+  display: block;
+  width: 64px;
+  height: 64px;
+  position: relative;
+  padding-right: 4rem;
+  animation-name: departure;
+  animation-delay: 2.6s;
+  animation-duration: 2s;
+}
+.preloader .loader::before {
+  content: "";
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  border: 6px solid white;
+  border-color: $primary-color transparent $second-color transparent;
+  border-radius: 50%;
+  animation: loader 1s infinite ease-in-out;
+}
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*<div class="preloader">
+  <h1>OhMyFood</h1>
+  <span class="loader"></span>
+  
+  </div>*/
