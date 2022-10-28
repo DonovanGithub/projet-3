@@ -1,0 +1,60 @@
+
+footer
+{
+  width: 100%;
+  background-color: #353535;
+  height: 220px;
+  
+}
+footer p
+{
+  color: white;
+  padding-left: 2rem;
+  
+}
+.footer-bloc img
+{
+  width: 8rem;
+  padding: 1rem 0 0 2rem;
+}
+
+footer .fa-utensils
+{
+  padding-right: 1rem;
+}
+footer .fa-handshake-angle
+{
+  padding-right: 0.5rem;
+}
+
+@media screen and (min-width: 767px) and (max-width: 992px){
+ 
+  footer{
+
+    text-align: center;
+    justify-content: center;
+    padding: 0;
+  }
+  .footer-bloc img
+  {
+   width: 13rem;
+  }
+}
+
+@media screen and (min-width: 1023px){
+  footer
+  {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+.footer-text
+{
+  display: flex;
+  flex-direction: row;
+
+}
+}
